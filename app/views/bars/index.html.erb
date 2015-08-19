@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Bars</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Hours</th>
+      <th>Specials</th>
+      <th>Disclaimer</th>
+      <th>Application</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+ 
+    <% @bars.each do |bar| %>
+      <tr>
+        <td><%= bar.name %></td>
+        <td><%= bar.location %></td>
+        <td><%= bar.hours %></td>
+        <td><%= bar.specials %></td>
+        <td><%= bar.disclaimer %></td>
+        <td><em> <%= link_to 'Apply to: '+  bar.name , new_application_path%></em></td>
+      
+        <td><%= link_to 'Show', bar %></td>
+        <td><%= link_to 'Edit', edit_bar_path(bar) %></td>
+        <td><%= link_to 'Destroy', bar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+
+  </tbody>
+
+</table>
+
+
+<br>
+
+<%= link_to 'New Bar', new_bar_path %>
