@@ -1,3 +1,6 @@
+
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -9,35 +12,87 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
- *
+  *require reset.css
+ *require style.css
  *= require_tree .
- *= require_self
+
  */
-body {
-	background:url("Double Crown 3.jpg"); 
-background-repeat: no-repeat;
-background-position: center center;
-background-attachment: fixed;
-	background-size: cover;
-    ]
+
+
+
+.container1{
+    position: left;
+    z-index:1;
+    width:1400px;
+    height:400px;
+    margin:20px;
+   /* border:1px solid red;*/
+   /* overflow:hidden;*/
+    color:white;
+
+}
+.container1:before{
+    z-index:-1;
+    position:absolute;
+    width:800px;
+    height:800px;
+    left:0;
+    top:0;
+    content: url('Prospect.jpg');
+
+    opacity:0.0;
+    -webkit-transition: opacity 2s linear;
+    -o-transition: opacity 1s linear;
+    -moz-transition: opacity 1s linear;
+    transition: opacity 1s linear;
+}
+.container1:hover:before{
+    opacity:4;
+}
+.title {
+    background-color: #7DB7D4;
+    
+    text-align: center;
+}
+#bartable{
+    width:75%;
+    font-size; 24pt;
+}
+  body:before{
+        content: "";
+        background-image:url('Double Crown 3');
+        background-repeat:repeat;
+        background-position:center;
+        background-attachment:fixed;
+        background-size:cover;
+        opacity: 0.6;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+    }
+
+    
 
 	/*-webkit-filter: blur(8px);
     -moz-filter: blur(8px);
- 
-    -o-filter: blur(13px);
-    -ms-filter: blur(13px);
-    filter: blur(13px);
-    position:absolute;
-}*/
+ /*
+    -o-filter: blur(13px)*/;
+   /* -ms-filter: blur(13px);*/
+   /* filter: blur(13px);*/
+    /*position:absolute;*/
 
-/*body > div {
+
+body > div {
     height:500px;
     width:100%;
     text-align:center;
     position:relative;
-}*/
-
-/*.blur {
+}
+/*
+title {
     background:url("Double Crown 3.jpg") no-repeat center;
     background-size:cover;
     -webkit-filter: blur(8px);
@@ -49,10 +104,10 @@ background-attachment: fixed;
     position:absolute;
     width:100%;
     height:100%;
-}*/
+}
+*/
 
-/*
-}*/
+}
 .nav{
 	background-color: #E4EBC2;
 
